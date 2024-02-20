@@ -9,8 +9,11 @@ eMes = 2629743
 eDia = 86400
 
 anoE = (ano - 1970) * eAno
-mesE = (30 - dia) * eMes
+mesE = (mes-1) * eMes
 diaE = (eDia*dia)
 
 data = (anoE + mesE + diaE)
 print(data)
+
+#1708387200
+#1708431747
