@@ -5,7 +5,6 @@ mes = int(input("Digite um mes: "))
 ano = int(input("Digite um ano: "))
 
 eAno = 31556926
-       31536000
 eMes = 2629743
 eDia = 86400
 
