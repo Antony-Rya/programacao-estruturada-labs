@@ -3,3 +3,4 @@ import re
 frase = input("Digite uma frase: ")
 novafrase = re.sub("[aeiou]", "*", frase)
 print(novafrase)
+
