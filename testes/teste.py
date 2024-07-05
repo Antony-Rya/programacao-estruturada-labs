@@ -1,10 +1,5 @@
-import random
-contador = 1
-indexador = 0
-lista = ["😒", "👍", "👏", "✌", "🤞", "🤷‍♂️", "🎶"]
-while contador <= 5:
-    indexador = random.randint(0, len(lista))
-    # print(random.choice(lista))
-    # contador +=1
-    print(lista[indexador])
-    contador +=1
+frutas = ['maçã', 'banana', 'laranja']
+cores = ['vermelho', 'amarelo', 'laranja']
+
+for fruta, cor in zip(frutas, cores):
+    print(f"{fruta} é da cor {cor}")
