@@ -1,17 +1,15 @@
+# q3
+
 soma = 0
-n1 = int(input())
-n2 = int(input())
-if n1>n2:
-    primeiro = n2
-    segundo = n1
-else:
-    primeiro = n1
-    segundo = n2
-
-
-primeiro = n2, segundo = n1 if (n1 > n2) else n1,  n2
-    
-for i in range(primeiro, segundo + 1):
-    if i > 0:
-        soma += i
-print(soma)
+cont = 0
+nota = 0
+while nota != -1:
+    nota = float(input())
+    if nota in range(0, 11):
+        soma += nota
+        cont += 1
+    else:
+        print("Nota invalida")
+        break
+if cont> 0:
+    print(soma/cont)
