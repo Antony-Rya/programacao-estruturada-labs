@@ -12,6 +12,6 @@ while True:
         cont += 1
     else:
         print("Nota invalida")
-        break
+        
 if cont> 0:
     print(soma/cont)
