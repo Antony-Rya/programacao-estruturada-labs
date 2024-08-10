@@ -1,19 +1,11 @@
 # q3
-
+numero = int(input(""))
+lista = []
 soma = 0
-cont = 0
-nota = 0
-while True:
-    nota = float(input())
-    if nota == -1:
-        break
-    if nota not in range(0, 11):
-        print("Nota invalida")
-        continue
-   
-    soma += nota
-    cont += 1
-       
-        
-if cont> 0:
-    print(soma/cont)
+exemplo = ""
+for i in range(1, numero + 1):
+    exemplo = f"{i}/{i*3}"
+    lista.append(exemplo)
+    soma += i/i*3
+print(lista)
+print(f"{soma:,2f}")
