@@ -162,3 +162,67 @@ def min_custom(lista):
     else:
         menor = C
     return menor
+
+def startswith_custom(string, prefixo):
+    '''
+    16-Crie uma função chamada startswith_custom que aceita 
+    uma string e um prefixo como argumentos e retorna True 
+    se a string começar com o prefixo, caso contrário, retorna 
+    False. Ela deve ter o mesmo comportamento que o método str.
+    startswith().
+    '''
+    for i, v in enumerate(prefixo):
+        if string[i] == v:
+            continue
+        else:
+            return False
+    return True
+
+    # if len(prefixo) > 1:
+    #     if string[0] == prefixo[0]:
+    #         if string[1] == prefixo[1]:
+    #             return True
+    # else:
+    #     return False
+    # if string[0] == prefixo[0]:
+    #     return True
+    # else:
+    #     return False
+    
+def endswith_custom(string, sufixo):
+    '''
+    17_Crie uma função chamada endswith_custom que 
+    aceita uma string e um sufixo como argumentos e retorna 
+    True se a string terminar com o sufixo, caso contrário, 
+    retorna False. Ela deve ter o mesmo comportamento que o 
+    método str.endswith().
+    '''
+    for i, v in enumerate(sufixo):
+        if string[-i] == v:
+            continue
+        else:
+            return False
+    return True
+
+    # if len(sufixo) > 1:
+    #     if string[-1] == sufixo[-1]:
+    #         if string[-2] == sufixo[-2]:
+    #             return True
+    #         else: 
+    #             return False
+    #     else: 
+    #         return False
+    # else:
+    #     if string[0] == sufixo[0]:
+    #         return True
+    #     else:
+    #         return False
+
+def split_custom(string, separador):
+    '''
+    18-Crie uma função chamada split_custom que aceita 
+    uma string e um caractere de separação como argumentos 
+    e retorna uma lista de substrings separadas pelo caractere 
+    de separação. Ela deve ter o mesmo comportamento que o método str.split().
+    '''
+    
