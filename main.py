@@ -60,9 +60,8 @@ def validar_email(email):
     # else:
     #     return True
 
-    if email.find("@") and email.find(".com") and (email.find(" ") == -1):
-        if email.find("@.") != -1:
-          return True
+    if bool(email.find("@")) and bool(email.find(".com")) and (bool((email.find(" ")) == False)) and (bool(email.find("@.") == False)):
+        return True
     else:
         return False
 
@@ -82,7 +81,7 @@ def maior_numero(a, b, c):
 
 def contagem_letras(string):
     '''
-    Escreva uma função em Python function que aceita uma string e 
+    11-Escreva uma função em Python function que aceita uma string e 
     retorna a quantidade de letras maiúsculas e minúsculas.
     '''
     maisculas = 0
@@ -97,5 +96,14 @@ def contagem_letras(string):
     return resultado
 
 
-
-validar_email("valido@email.com")
+def len_custom(iteravel):
+    '''
+    12-Crie uma função chamada len_custom que aceita 
+    um iterável (por exemplo, uma lista ou uma string) 
+    como argumento e retorna o número de elementos no iterável. 
+    Ela deve ter o mesmo comportamento que a função embutida len().
+    '''
+    cont = 0
+    for i in iteravel:
+        cont += 1
+    return cont
