@@ -104,6 +104,61 @@ def len_custom(iteravel):
     Ela deve ter o mesmo comportamento que a função embutida len().
     '''
     cont = 0
-    for i in iteravel:
+    for _ in iteravel:
         cont += 1
     return cont
+
+def sum_custom(numeros):
+    '''
+    12-Crie uma função chamada sum_custom que aceita 
+    uma lista de números como argumento e retorna a soma 
+    de todos os números na lista. Ela deve ter o mesmo 
+    comportamento que a função embutida sum().
+    '''
+    soma = 0
+    for i in numeros:
+        soma += i
+
+    return soma
+
+def max_custom(lista):
+    '''
+    Crie uma função chamada max_custom que aceita uma 
+    lista de números como argumento e retorna o maior 
+    número na lista. Ela deve ter o mesmo comportamento 
+    que a função embutida max().
+    '''
+    if len(lista) == 0:
+        return None
+    A = lista[0]
+    B = lista[1]
+    C = lista[2]
+    maior = 0
+    if A > B and A > C:
+        maior = A
+    elif B > A and B > C:
+        maior = B
+    else:
+        maior = C
+    return maior
+
+def min_custom(lista):
+    '''
+    15-Crie uma função chamada max_custom que aceita uma 
+    lista de números como argumento e retorna o maior 
+    número na lista. Ela deve ter o mesmo comportamento 
+    que a função embutida max().
+    '''
+    if len(lista) == 0:
+        return None
+    A = lista[0]
+    B = lista[1]
+    C = lista[2]
+    menor = 0
+    if A < B and A < C:
+        menor = A
+    elif B < A and B < C:
+        menor = B
+    else:
+        menor = C
+    return menor
