@@ -60,7 +60,7 @@ def validar_email(email):
     # else:
     #     return True
 
-    if email.find("@") and email.find(".com") and (email.find(" ") == False):
+    if email.find("@") and email.find(".com") and (email.find(" ") == -1):
         if email.find("@.") != -1:
           return True
     else:
@@ -95,3 +95,7 @@ def contagem_letras(string):
             minusculas += 1
     resultado = (maisculas, minusculas)
     return resultado
+
+
+
+validar_email("valido@email.com")
