@@ -229,10 +229,12 @@ def split_custom(string, separador):
     pointer = 0
     for i in string:
         atual = string.index(i)
-        if i == separador or atual == len(string):
-            pointer = string.index(i)
-            lista.append(string[pointer:atual+1])
-           
+        if i == separador:
+            
+            lista.append(string[pointer:atual])
+            pointer = string.index(i)+1
+        elif i == string[-1]:
+            lista.append(string[pointer])
     return lista
 def strip_custom(string, caracteres):
 
