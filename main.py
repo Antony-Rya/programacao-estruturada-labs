@@ -191,7 +191,7 @@ def startswith_custom(string, prefixo):
     
 def endswith_custom(string, sufixo):
     '''
-    17_Crie uma função chamada endswith_custom que 
+    17-Crie uma função chamada endswith_custom que 
     aceita uma string e um sufixo como argumentos e retorna 
     True se a string terminar com o sufixo, caso contrário, 
     retorna False. Ela deve ter o mesmo comportamento que o 
@@ -225,4 +225,48 @@ def split_custom(string, separador):
     e retorna uma lista de substrings separadas pelo caractere 
     de separação. Ela deve ter o mesmo comportamento que o método str.split().
     '''
-    
+    lista = []
+    pointer = 0
+    for i in string:
+        atual = string.index(i)
+        if i == separador or atual == len(string):
+            pointer = string.index(i)
+            lista.append(string[pointer:atual+1])
+           
+    return lista
+def strip_custom(string, caracteres):
+
+    '''
+    19-Crie uma função chamada strip_custom que aceita 
+    uma string e caracteres de remoção como argumentos 
+    e retorna uma nova string com os caracteres de remoção 
+    removidos dos extremos da string. Ela deve ter o mesmo 
+    comportamento que o método str.strip().
+    '''
+    newstring = ""
+    for i in string:
+        if i != caracteres:
+            newstring += i
+    return newstring
+
+def replace_custom(string, substring, substringN):
+    '''
+    20-Crie uma função chamada replace_custom que 
+    aceita uma string, uma substring antiga e uma substring 
+    nova como argumentos e retorna uma nova string com todas as 
+    ocorrências da substring antiga substituídas pela substring 
+    nova. Ela deve ter o mesmo comportamento que o método str.replace().
+    '''
+    tamanho = len(substring)
+    newstring = ""
+    idx = string.index(substring)
+    plot = string[0:idx]
+    plot2 = string[idx+tamanho:]
+    newstring = plot + substringN + plot2
+    return newstring
+
+# def 
+#     '''
+#     21-Crie uma função que aceita *args e retorna a 
+#     soma de todos os números passados como argumentos.
+#     '''
