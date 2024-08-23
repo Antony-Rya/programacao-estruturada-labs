@@ -15,7 +15,7 @@ Imprima todas os valores da nova lista
 '''
 lista = []
 
-def converterCelsius(fahren):
+def converter_para_celsius(fahren):
     celsius = (fahren -32) * 5/9
     return celsius
 
@@ -25,8 +25,14 @@ while True:
         lista.append(float(input("Digite uma temperatura, apenas aperte enter para terminar: ")))
     except:
         break
-nova_lista = list(map(converterCelsius, lista))
+nova_lista = map(converter_para_celsius, lista)
+for t in nova_lista:
+    print(f"{nova_lista:.2f}")
 
-print(f"Os valores convertidos são: {nova_lista}")
+
+
+converter_para_celsius = lambda x: (x-32) * 3/9
+
+
 
 

@@ -6,12 +6,26 @@ Faça um programa que preenche um vetor de 10 posições com números aleatório
 Vetor original [2, 1, 20,5, 17,19,14,4, 18,2]
 Vetor manipulado [2, 3, 25,35,82,166, 327, 644, 1302,2588]
 '''
-def somarLista():
-    vetor_original = gerar_lancamentos(0, 20, 10)
-    print(vetor_original)
-    numero_anterior = 0
-    for i, k in enumerate(vetor_original):
-        vetor_original[i] = k + numero_anterior
-        numero_anterior += k
-    print(vetor_original)
-somarLista()
+# def somarLista():
+#     vetor_original = gerar_lancamentos(0, 20, 10)
+#     print(vetor_original)
+#     numero_anterior = 0
+#     for i, k in enumerate(vetor_original):
+#         soma += i
+#         vetor_original[i] = k + soma
+#         numero_anterior += k
+#     print(vetor_original)
+# somarLista()
+tamanho = 10
+numeros = gerar_lancamentos(0, 20, tamanho)
+
+soma = 0
+
+for i in range(tamanho):
+    numeros[i] = numeros[i] + soma
+    soma = numeros[i]
+    for j in range(i, -1, -1):
+        soma += numeros[j]
+    numeros[i] = soma
+    soma = 0
+print(numeros)

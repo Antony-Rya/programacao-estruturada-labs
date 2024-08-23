@@ -28,7 +28,9 @@ def ordenacao_e_soma(dicionario):
             mais_velha = i
             maior = dicionario[i]
             
-    return print(sorted(dicionario)), print(soma/len(dicionario)), print(mais_velha) 
+    print(sorted(dicionario))
+    print(soma/len(dicionario))
+    print(mais_velha) 
 
 
 ordenacao_e_soma(people)
