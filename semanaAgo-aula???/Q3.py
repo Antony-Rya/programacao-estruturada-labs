@@ -11,4 +11,6 @@ vetor_original = gerar_lancamentos(0, 20, 10)
 
 
 for i in vetor_original:
-    vetor_original[i] = vetor_original[i] + vetor_original[i-1]
+    if vetor_original.index(i) != 0:
+        vetor_original[i] = vetor_original[i] + vetor_original[i-1]
+print(vetor_original)
