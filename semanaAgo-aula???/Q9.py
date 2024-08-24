@@ -1,3 +1,6 @@
+from Q2 import gerar_lancamentos
+from random import randint
+
 '''
 9 - Você recebe um número inteiro grande representado como um array de inteiros 
 chamado 'digits', onde cada 'digits[i]' é o i-ésimo dígito do número. Os dígitos 
@@ -21,3 +24,13 @@ Exemplo 3:
 Entrada: digits = [9] Saída: [1,0] Explicação: O array representa o número 9. Incrementar 
 um resulta em 9 + 1 = 10. Portanto, o resultado deve ser [1,0].
 '''
+
+digits = gerar_lancamentos(randint(1, 9), 9, randint(3, 7))
+numero = ""
+for v in digits:
+    numero += str(v)
+print(digits)
+numero = str(int(numero)+1)
+for i in range(len(numero)):
+    digits[i] = int(numero[i])
+print(digits)
