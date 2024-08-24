@@ -7,6 +7,6 @@ Utilize a função map e uma função lambda para multiplicar por 2 os números 
 '''
 
 lista = [i**2 for i in range(1, 11)]
-print(lista)
-lista2 = map(lambda x: x*2 if x > 5 else x, lista)
+
+lista2 = map( lambda x: x*2 if x>5 else x, lista)
 print(list(lista2))
