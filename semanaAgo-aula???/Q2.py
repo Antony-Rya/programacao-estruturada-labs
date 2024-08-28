@@ -7,9 +7,12 @@ Faça uma iteração na lista para verificar quantos destes números são iguais
 
 def gerar_lancamentos(min, max, tamanho):
     numeros = []
-    for _ in range(tamanho):
+    for i in range(tamanho):
         from random import randint
-        numeros.append(randint(min, max))
+        if i == 0:
+            numeros.append(randint(1, max))
+        else:
+            numeros.append(randint(min, max))
     return numeros
 
 def porcentagemFaces(lista, numero):

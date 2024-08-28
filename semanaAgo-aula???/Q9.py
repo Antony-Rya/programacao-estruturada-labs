@@ -25,12 +25,8 @@ Entrada: digits = [9] Saída: [1,0] Explicação: O array representa o número 9
 um resulta em 9 + 1 = 10. Portanto, o resultado deve ser [1,0].
 '''
 
-digits = gerar_lancamentos(randint(1, 9), 9, randint(3, 7))
-numero = ""
-for v in digits:
-    numero += str(v)
+digits = gerar_lancamentos(0, 9, randint(3, 7))
 print(digits)
-numero = str(int(numero)+1)
-for i in range(len(numero)):
-    digits[i] = int(numero[i])
+digits[len(digits)] += 1
+
 print(digits)
