@@ -9,17 +9,24 @@ def ler_valores():
     return lista
 
 def processa_lista(lista):
-    pares = []
-    impares = []
+    pares, impares = [], []
+    antigo_pares, antigo_impares = 0, 0
     for i in lista:
         if i % 2 == 0:
-            pares.append(i)
             if len(pares) > 5:
-                pares.pop(0)
+                pares.pop(antigo_pares)
+                pares[antigo_pares] = i
+                antigo_pares += 1
+            else: 
+                pares.append(i)
         else:
-            impares.append(i)
             if len(impares) > 5:
-                impares.pop(0)
+                if len(pares) > 5:
+                    impares.pop(antigo_pares)
+                    pares[antigo_impares] = i
+                    antigo_pares += 1
+                else: 
+                    impares.append(i)
     return pares, impares
 
 lista = ler_valores()
